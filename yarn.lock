@@ -673,6 +673,26 @@
   resolved "https://registry.npmjs.org/@fastify/busboy/-/busboy-3.1.1.tgz"
   integrity sha512-5DGmA8FTdB2XbDeEwc/5ZXBl6UbBAyBOOLlPuBnZ/N1SwdH9Ii+cOX3tBROlDgcTXxjOYnLMVoKk9+FXAw0CJw==
 
+"@floating-ui/core@^1.7.2":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.7.2.tgz#3d1c35263950b314b6d5a72c8bfb9e3c1551aefd"
+  integrity sha512-wNB5ooIKHQc+Kui96jE/n69rHFWAVoxn5CAzL1Xdd8FG03cgY3MLO+GF9U3W737fYDSgPWA6MReKhBQBop6Pcw==
+  dependencies:
+    "@floating-ui/utils" "^0.2.10"
+
+"@floating-ui/dom@^1.6.13":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.7.2.tgz#3540b051cf5ce0d4f4db5fb2507a76e8ea5b4a45"
+  integrity sha512-7cfaOQuCS27HD7DX+6ib2OrnW+b4ZBwDNnCcT0uTyidcmyWb03FnQqJybDBoCnpdxwBSfA94UAYlRCt7mV+TbA==
+  dependencies:
+    "@floating-ui/core" "^1.7.2"
+    "@floating-ui/utils" "^0.2.10"
+
+"@floating-ui/utils@^0.2.10":
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.10.tgz#a2a1e3812d14525f725d011a73eceb41fef5bc1c"
+  integrity sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==
+
 "@humanwhocodes/config-array@^0.11.13":
   version "0.11.14"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.14.tgz#d78e481a039f7566ecc9660b4ea7fe6b1fec442b"
@@ -2906,11 +2926,6 @@ csstype@^3.1.3:
   resolved "https://registry.npmjs.org/csstype/-/csstype-3.1.3.tgz"
   integrity sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
 
-daisyui@^5.0.46:
-  version "5.0.46"
-  resolved "https://registry.npmjs.org/daisyui/-/daisyui-5.0.46.tgz"
-  integrity sha512-vMDZK1tI/bOb2Mc3Mk5WpquBG3ZqBz1YKZ0xDlvpOvey60dOS4/5Qhdowq1HndbQl7PgDLDYysxAjjUjwR7/eQ==
-
 data-uri-to-buffer@^4.0.0:
   version "4.0.1"
   resolved "https://registry.npmjs.org/data-uri-to-buffer/-/data-uri-to-buffer-4.0.1.tgz"
@@ -3892,6 +3907,13 @@ flatted@^3.2.9:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.3.3.tgz#67c8fad95454a7c7abebf74bb78ee74a44023358"
   integrity sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==
+
+flyonui@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/flyonui/-/flyonui-2.2.0.tgz#53ada374c0c10b49614e2e98513d8a4849c5dbef"
+  integrity sha512-Gncal89zwklAYpqV8IjSgN/1edsXnbTlxhfKRcYa2WgeY8jBSuoNBQWqdL1DSLuXarxYluimwIv34YaRKNuSzg==
+  dependencies:
+    "@floating-ui/dom" "^1.6.13"
 
 fn.name@1.x.x:
   version "1.1.0"

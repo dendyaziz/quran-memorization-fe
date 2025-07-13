@@ -1,5 +1,5 @@
 # Boilerplate Frontend Application
-Using Nuxt 3, DaisyUI 5, Tailwind CSS 4, TypeScript, Eslint (Antfu).
+Using Nuxt 3, FlyonUI 5, Tailwind CSS 4, TypeScript, Eslint (Antfu).
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 

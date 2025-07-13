@@ -1,8 +1,8 @@
 @import "tailwindcss";
-@plugin "daisyui";
-@plugin "daisyui/theme" {
+@plugin "flyonui";
+@plugin "flyonui/theme" {
     name: light;
     default: true;
-    --color-primary: oklch(0.145 0 89.876);
+    --color-primary: oklch(0.518 0.207 259.613);
     --color-primary-content: oklch(1 0 89.876);
 }
