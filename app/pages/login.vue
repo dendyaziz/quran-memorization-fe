@@ -1,10 +1,14 @@
 <script setup lang="ts">
+import {useAuthStore} from "~/stores/auth";
+
 const loading = ref(false)
+
+const authStore = useAuthStore()
 
 const handleGoogleLogin = async () => {
   try {
     loading.value = true
-    // await authStore.signInWithGoogle()
+    await authStore.signInWithGoogle()
   } catch (error) {
     console.error('Google login error:', error)
   } finally {
