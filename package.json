@@ -18,7 +18,7 @@
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/vite": "^4.1.12",
     "flyonui": "^2.4.0",
-    "nuxt": "^3.17.6",
+    "nuxt": "^4.1.0",
     "pinia": "^3.0.3",
     "tailwindcss": "^4.1.12",
     "vue": "^3.5.17",
