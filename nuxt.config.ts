@@ -13,6 +13,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBaseUrl: '',
+      supabaseUrl: '',
+      supabaseAnonKey: '',
     },
   },
   css: ['~/assets/app.css'],
