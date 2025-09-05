@@ -5,10 +5,18 @@ definePageMeta({
   middleware: ['auth'],
 })
 
+const authStore = useAuthStore()
+const quranStore = useQuranStore()
+
 const config = useRuntimeConfig()
 const apiUrl = config.public.apiBaseUrl
 
-const authStore = useAuthStore()
+const populatingData = computed(() => quranStore.populatingData)
+const populationPercentage = computed(() => quranStore.populationPercentage)
+
+onMounted(async () => {
+  await quranStore.loadInitialData()
+})
 </script>
 
 <template>
@@ -32,4 +40,39 @@ const authStore = useAuthStore()
   >
     Logout
   </button>
+
+  <ClientOnly>
+    <div
+      v-if="populatingData"
+      class="p-4 text-center"
+    >
+      <span class="loading loading-spinner" />
+      <div class="mt-4">
+        <div
+          v-if="populatingData"
+          class="h6"
+        >
+          Downloading Quran Data...
+        </div>
+
+        <div
+          v-if="populatingData"
+          class="mt-4"
+        >
+          <div
+            class="progress h-4"
+            role="progressbar"
+            aria-label="100% Progressbar"
+            :aria-valuenow="populationPercentage"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-bar w-full font-normal">
+              {{ populationPercentage }}%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ClientOnly>
 </template>
