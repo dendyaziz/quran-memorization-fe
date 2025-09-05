@@ -19,7 +19,9 @@ const authStore = useAuthStore()
     {{ apiUrl }}
   </p>
 
-  <p v-if="authStore.session">{{ authStore.session.user.email }}</p>
+  <ClientOnly>
+    <p v-if="authStore.session">{{ authStore.session.user.email }}</p>
+  </ClientOnly>
 
   <button
     id="button"
