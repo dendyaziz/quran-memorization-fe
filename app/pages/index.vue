@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import {useAuthStore} from "~/stores/auth";
 
+definePageMeta({
+  middleware: ['auth']
+})
+
 const config = useRuntimeConfig()
 const apiUrl = config.public.apiBaseUrl
 
 const authStore = useAuthStore()
-authStore.initialize()
 </script>
 
 <template>
