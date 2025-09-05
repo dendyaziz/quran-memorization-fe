@@ -82,6 +82,8 @@ export const useAuthStore = defineStore('auth', () => {
   const signOut = async () => {
     const { error } = await $supabase.auth.signOut()
     if (error) throw error
+
+    navigateTo('/login')
   }
 
   // Reset password
