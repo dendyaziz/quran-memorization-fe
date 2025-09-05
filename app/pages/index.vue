@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import {useAuthStore} from "~/stores/auth";
+
 const config = useRuntimeConfig()
 const apiUrl = config.public.apiBaseUrl
+
+const authStore = useAuthStore()
+authStore.initialize()
 </script>
 
 <template>
@@ -10,6 +15,8 @@ const apiUrl = config.public.apiBaseUrl
   <p class="mb-4">
     {{ apiUrl }}
   </p>
+
+  <p v-if="authStore.session">{{ authStore.session.user.email }}</p>
 
   <button
     id="button"
