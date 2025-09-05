@@ -1,7 +1,6 @@
-import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
 import type { Session } from '@supabase/supabase-js'
-
+import { defineStore } from 'pinia'
+import { computed, ref } from 'vue'
 
 export const useAuthStore = defineStore('auth', () => {
   const session = ref<Session | null>(null)
@@ -14,7 +13,8 @@ export const useAuthStore = defineStore('auth', () => {
 
   // Initialize auth state
   const initialize = async () => {
-    if (initialized.value) return
+    if (initialized.value)
+      return
 
     // Get the current session
     const { data } = await $supabase.auth.getSession()
@@ -50,7 +50,8 @@ export const useAuthStore = defineStore('auth', () => {
       password,
     })
 
-    if (error) throw error
+    if (error)
+      throw error
     return data
   }
 
@@ -61,7 +62,8 @@ export const useAuthStore = defineStore('auth', () => {
       password,
     })
 
-    if (error) throw error
+    if (error)
+      throw error
     return data
   }
 
@@ -71,17 +73,19 @@ export const useAuthStore = defineStore('auth', () => {
       provider: 'google',
       options: {
         redirectTo: window.location.origin,
-      }
+      },
     })
 
-    if (error) throw error
+    if (error)
+      throw error
     return data
   }
 
   // Sign out
   const signOut = async () => {
     const { error } = await $supabase.auth.signOut()
-    if (error) throw error
+    if (error)
+      throw error
 
     navigateTo('/login')
   }
@@ -92,7 +96,8 @@ export const useAuthStore = defineStore('auth', () => {
       redirectTo: `${window.location.origin}/reset-password`,
     })
 
-    if (error) throw error
+    if (error)
+      throw error
     return data
   }
 

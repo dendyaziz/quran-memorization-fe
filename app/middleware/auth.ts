@@ -1,5 +1,6 @@
-export default defineNuxtRouteMiddleware(async (to, from) => {
-  if (import.meta.server) return
+export default defineNuxtRouteMiddleware(async (to) => {
+  if (import.meta.server)
+    return
 
   const authStore = useAuthStore()
 
@@ -12,10 +13,10 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
     // Store the intended destination in sessionStorage for post-login redirect
     try {
       localStorage.set('redirectAfterLogin', to.fullPath)
-    } catch (error) {
+    }
+    catch (error) {
       console.warn('Failed to save redirect path to SessionStorage:', error)
     }
-    console.log('isAuthenticated', authStore.isAuthenticated)
 
     // Redirect to login
     return navigateTo('/login')

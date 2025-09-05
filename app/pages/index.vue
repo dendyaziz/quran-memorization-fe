@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import {useAuthStore} from "~/stores/auth";
+import { useAuthStore } from '~/stores/auth'
 
 definePageMeta({
-  middleware: ['auth']
+  middleware: ['auth'],
 })
 
 const config = useRuntimeConfig()
@@ -20,7 +20,9 @@ const authStore = useAuthStore()
   </p>
 
   <ClientOnly>
-    <p v-if="authStore.session">{{ authStore.session.user.email }}</p>
+    <p v-if="authStore.session">
+      {{ authStore.session.user.email }}
+    </p>
   </ClientOnly>
 
   <button
