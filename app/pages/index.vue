@@ -24,7 +24,8 @@ const authStore = useAuthStore()
   <button
     id="button"
     class="btn btn-primary"
+    @click="authStore.signOut()"
   >
-    Button
+    Logout
   </button>
 </template>

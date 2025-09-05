@@ -15,9 +15,9 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
     } catch (error) {
       console.warn('Failed to save redirect path to SessionStorage:', error)
     }
+    console.log('isAuthenticated', authStore.isAuthenticated)
 
     // Redirect to login
-    navigateTo('/login')
-    return
+    return navigateTo('/login')
   }
 })
